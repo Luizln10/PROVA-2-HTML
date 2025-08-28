@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário 3 Meses</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #f0f2f5; color: #333; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 20px; }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        .calendars { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+        .calendar { background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px; width: 330px; }
+        .calendar h2 { text-align: center; color: #2c3e50; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 2px solid #3498db; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #3498db; color: white; padding: 8px; font-size: 14px; }
+        td { border: 1px solid #ddd; padding: 8px; text-align: center; height: 35px; cursor: pointer; }
+        td:hover { background: #f1f1f1; }
+        .other-month { color: #bbb; }
+        .today { background: #ffeaa7; font-weight: bold; }
+        .holiday { background: #ff7675; color: white; }
+        .study { background: #74b9ff; color: white; }
+        .personal { background: #55efc4; }
+        .appointment { background: #a29bfe; color: white; }
+        .legend { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
+        .legend-item { display: flex; align-items: center; gap: 5px; font-size: 14px; }
+        .color-box { width: 15px; height: 15px; border-radius: 3px; }
+        @media (max-width: 768px) { .calendars { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calendário - Próximos 3 Meses</h1>
+            <p>Feriados e agendamentos pessoais</p>
+        </header>
+        
+        <div class="calendars">
+            <!-- Outubro 2023 -->
+            <div class="calendar">
+                <h2>Outubro 2023</h2>
+                <table>
+                    <tr><th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th></tr>
+                    <tr>
+                        <td class="other-month">24</td><td class="other-month">25</td><td class="other-month">26</td>
+                        <td class="other-month">27</td><td class="other-month">28</td><td class="other-month">29</td>
+                        <td class="other-month">30</td>
+                    </tr>
+                    <tr>
+                        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                    </tr>
+                    <tr>
+                        <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="today">13</td><td>14</td>
+                    </tr>
+                    <tr>
+                        <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+                    </tr>
+                    <tr>
+                        <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+                    </tr>
+                    <tr>
+                        <td>29</td><td>30</td><td>31</td><td class="other-month">1</td><td class="other-month">2</td>
+                        <td class="other-month">3</td><td class="other-month">4</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Novembro 2023 -->
+            <div class="calendar">
+                <h2>Novembro 2023</h2>
+                <table>
+                    <tr><th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th></tr>
+                    <tr>
+                        <td class="other-month">29</td><td class="other-month">30</td><td class="other-month">31</td>
+                        <td>1</td><td>2</td><td class="holiday">3</td><td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td><td class="study">13</td><td class="study">14</td><td class="appointment">15</td>
+                        <td>16</td><td>17</td><td>18</td>
+                    </tr>
+                    <tr>
+                        <td>19</td><td>20</td><td class="personal">21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class="other-month">1</td>
+                        <td class="other-month">2</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Dezembro 2023 -->
+            <div class="calendar">
+                <h2>Dezembro 2023</h2>
+                <table>
+                    <tr><th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th></tr>
+                    <tr>
+                        <td class="other-month">26</td><td class="other-month">27</td><td class="other-month">28</td>
+                        <td class="other-month">29</td><td class="other-month">30</td><td>1</td><td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td class="personal">9</td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+                    </tr>
+                    <tr>
+                        <td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+                    </tr>
+                    <tr>
+                        <td class="holiday">24</td><td class="holiday">25</td><td class="holiday">26</td>
+                        <td>27</td><td>28</td><td>29</td><td>30</td>
+                    </tr>
+                    <tr>
+                        <td class="holiday">31</td><td class="other-month">1</td><td class="other-month">2</td>
+                        <td class="other-month">3</td><td class="other-month">4</td><td class="other-month">5</td>
+                        <td class="other-month">6</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item"><div class="color-box" style="background:#ffeaa7"></div><span>Hoje</span></div>
+            <div class="legend-item"><div class="color-box" style="background:#ff7675"></div><span>Feriado</span></div>
+            <div class="legend-item"><div class="color-box" style="background:#74b9ff"></div><span>Estudos</span></div>
+            <div class="legend-item"><div class="color-box" style="background:#55efc4"></div><span>Pessoal</span></div>
+            <div class="legend-item"><div class="color-box" style="background:#a29bfe"></div><span>Compromisso</span></div>
+        </div>
+    </div>
+
+    <script>
+        // Adicionando informações ao passar o mouse
+        document.querySelectorAll('.holiday').forEach(day => {
+            day.title = "Feriado: Dia de Finados (Nov) / Natal (Dez)";
+        });
+        document.querySelectorAll('.study').forEach(day => {
+            day.title = "Estudos: Curso de Desenvolvimento Web";
+        });
+        document.querySelectorAll('.personal').forEach(day => {
+            day.title = "Atividade Pessoal";
+        });
+        document.querySelectorAll('.appointment').forEach(day => {
+            day.title = "Compromisso: Reunião com equipe";
+        });
+        document.querySelector('.today').title = "Hoje: " + new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
